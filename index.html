@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contador de 'a'</title>
+</head>
+<body>
+
+  <h1>Contador de 'a'</h1>
+  <input type="text" id="texto" placeholder="Digite um texto">
+  <button onclick="contarA()">Contar</button>
+  <p id="resultado"></p>
+
+  <script>
+    function contarA() {
+      let texto = document.getElementById("texto").value.toLowerCase();
+      let contador = 0;
+
+      for (let i = 0; i < texto.length; i++) {
+        if (texto[i] === 'a') {
+          contador++;
+        }
+      }
+
+      document.getElementById("resultado").textContent = "A letra 'a' aparece " + contador + " vezes no texto.";
+    }
+  </script>
+
+</body>
+</html>
